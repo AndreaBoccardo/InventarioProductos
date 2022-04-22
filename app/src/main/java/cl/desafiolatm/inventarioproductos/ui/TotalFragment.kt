@@ -42,6 +42,7 @@ class TotalFragment : Fragment() {
             }
         })
 
+        viewModel.borrar()
         viewModel.eliminarTodo.observe(viewLifecycleOwner, Observer {
             with(binding){
                 btnBorrarTodo.setOnClickListener {

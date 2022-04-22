@@ -22,6 +22,9 @@ class CompraAdapter: RecyclerView.Adapter<CompraAdapter.CustomViewHolder>() {
                 tvNombreItem.text = compra.producto
                 tvCantidadItem.text = compra.cantidad.toString()
                 tvPrecioItem.text = compra.precio.toString()
+                itemView.setOnClickListener {
+                    listener.onClickListener(compra)
+                }
                 btnEditar.setOnClickListener {
                     listener.onClickListener(compra)
                 }

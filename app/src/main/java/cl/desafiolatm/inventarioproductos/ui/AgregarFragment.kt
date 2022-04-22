@@ -32,32 +32,30 @@ class AgregarFragment : Fragment() {
                             tvSubTotal.text = (etCantidadAgregar.text.toString()
                                 .toInt() * etValorAgregar.text.toString().toInt()).toString()
                         } else {
-                            Toast.makeText(context, getString(R.string.error_precio), Toast.LENGTH_LONG).show()
+                            Toast.makeText(context, "Debe ingresar un precio mayor a 0", Toast.LENGTH_LONG).show()
                         }
                     } else {
-                        Toast.makeText(context, getString(R.string.error_cantidad), Toast.LENGTH_LONG).show()
+                        Toast.makeText(context, "Debe ingresar una cantidad mayor a 1", Toast.LENGTH_LONG).show()
                     }
                 } else {
-                    Toast.makeText(context, getString(R.string.error_nombre), Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, "Debe ingresar un nombre", Toast.LENGTH_LONG).show()
                 }
+
+                val producto = etNombreAgregar.text.toString()
+                val cantidad = etCantidadAgregar.text.toString().toInt()
+                val precio = etValorAgregar.text.toString().toInt()
+                viewModel.agregar(producto, cantidad, precio)
+                val alerta = AlertDialog.Builder(requireContext())
+                alerta.setTitle("Agregada")
+                alerta.setMessage("Su compra fue agregada exitosamente")
+                alerta.setPositiveButton("ok", DialogInterface.OnClickListener { dialog, which ->
+                    dialog.cancel()
+                })
+                alerta.show()
+                etNombreAgregar.text.clear()
+                etCantidadAgregar.text.clear()
+                etValorAgregar.text.clear()
             }
-
-            val producto = etNombreAgregar.text.toString()
-            val cantidad = etCantidadAgregar.text.toString().toInt()
-            val precio = etValorAgregar.text.toString().toInt()
-            viewModel.agregar(producto, cantidad, precio)
-
-            val alerta = AlertDialog.Builder(requireContext())
-            alerta.setTitle(getString(R.string.agregada))
-            alerta.setMessage("Su compra fue agregada exitosamente")
-            alerta.setPositiveButton("ok", DialogInterface.OnClickListener { dialog, which ->
-                dialog.cancel()
-            })
-            alerta.show()
-
-            etNombreAgregar.text.clear()
-            etCantidadAgregar.text.clear()
-            etValorAgregar.text.clear()
         }
 
         return binding.root

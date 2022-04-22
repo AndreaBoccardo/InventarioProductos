@@ -21,89 +21,104 @@
             app:layout_constraintHorizontal_bias="0.45"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.051" />
+            app:layout_constraintVertical_bias="0.051"
+            tools:layout_editor_absoluteX="85dp" />
 
         <EditText
             android:id="@+id/etNombreAgregar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.452"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tituloAgregar"
+            app:layout_constraintVertical_bias="0.092"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/nombre_del_producto"
             android:inputType="textPersonName"
             android:textSize="18sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="187dp" />
+
+        <EditText
+            android:id="@+id/etCantidadAgregar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tituloAgregar"
-            app:layout_constraintVertical_bias="0.092" />
-
-        <EditText
-            android:id="@+id/etCantidadAgregar"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreAgregar"
+            app:layout_constraintVertical_bias="0.036"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/cantidad"
             android:inputType="number"
             android:textSize="18sp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="264dp" />
+
+        <EditText
+            android:id="@+id/etValorAgregar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etNombreAgregar"
-            app:layout_constraintVertical_bias="0.036" />
-
-        <EditText
-            android:id="@+id/etValorAgregar"
+            app:layout_constraintTop_toBottomOf="@+id/etCantidadAgregar"
+            app:layout_constraintVertical_bias="0.048"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/valor"
             android:inputType="number"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.452"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etCantidadAgregar"
-            app:layout_constraintVertical_bias="0.048" />
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="329dp" />
 
         <TextView
             android:id="@+id/subAgregar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/subtotal"
-            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.346"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/etValorAgregar"
-            app:layout_constraintVertical_bias="0.206" />
+            app:layout_constraintVertical_bias="0.206"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subtotal"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="421dp" />
 
         <TextView
             android:id="@+id/tvSubTotal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/subAgregar"
             app:layout_constraintTop_toBottomOf="@+id/etValorAgregar"
-            app:layout_constraintVertical_bias="0.206" />
+            app:layout_constraintVertical_bias="0.206"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="257dp"
+            tools:layout_editor_absoluteY="421dp" />
 
         <Button
             android:id="@+id/btnModificar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/agregar_producto"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/subAgregar"
-            app:layout_constraintVertical_bias="0.298" />
+            app:layout_constraintVertical_bias="0.298"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agregar_producto"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="620dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

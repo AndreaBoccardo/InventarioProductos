@@ -22,7 +22,7 @@
             app:layout_constraintTop_toBottomOf="@+id/rvLista"
             app:layout_constraintVertical_bias="0.641" />
 
-        <ImageButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/btnAgregar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,8 +33,9 @@
             app:layout_constraintHorizontal_bias="0.328"
             app:layout_constraintStart_toEndOf="@+id/btnTotal"
             app:layout_constraintTop_toBottomOf="@+id/rvLista"
-            app:layout_constraintVertical_bias="0.654"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintVertical_bias="0.654" />
+
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvLista"
