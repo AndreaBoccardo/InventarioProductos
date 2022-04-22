@@ -15,4 +15,12 @@
     <string name="valor">Valor</string>
     <string name="subtotal">Subtotal $:</string>
     <string name="editar_producto">EDITAR PRODUCTO</string>
+    <string name="error_precio">Debe ingresar un precio mayor a 0</string>
+    <string name="error_cantidad">Debe ingresar una cantidad mayor a 1</string>
+    <string name="error_nombre">Debe ingresar un nombre</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="msg_eliminar">¿Seguro desea eliminar el producto?</string>
+    <string name="agregada">Agregada</string>
 </resources>
