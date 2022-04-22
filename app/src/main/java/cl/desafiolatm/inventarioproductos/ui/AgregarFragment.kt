@@ -25,6 +25,8 @@ class AgregarFragment : Fragment() {
         binding = FragmentAgregarBinding.inflate(inflater, container, false)
 
         with(binding){
+            tvSubTotal.text = (etCantidadAgregar.text.toString()
+                .toInt() * etValorAgregar.text.toString().toInt()).toString()
             btnModificar.setOnClickListener {
                 if (etNombreAgregar.text.isNotEmpty()){
                     if (etCantidadAgregar.text.toString().toInt() > 1){
