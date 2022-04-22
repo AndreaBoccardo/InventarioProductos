@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">InventarioProductos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="producto">Producto:</string>
+    <string name="cantidad">Cantidad:</string>
+    <string name="total">Total $:</string>
+    <string name="total_compra">Total Compra</string>
+    <string name="resumen_compra">RESUMEN COMPRA</string>
+    <string name="cantidad_de_productos">Cantidad de productos:</string>
+    <string name="valor_total">Valor total $:</string>
+    <string name="eliminar_compra">Eliminar Compra</string>
+    <string name="agregar_producto">AGREGAR PRODUCTO</string>
+    <string name="nombre_del_producto">Nombre del Producto</string>
+    <string name="valor">Valor</string>
+    <string name="subtotal">Subtotal $:</string>
+    <string name="editar_producto">EDITAR PRODUCTO</string>
 </resources>

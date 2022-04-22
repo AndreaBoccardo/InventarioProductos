@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaFragment">
+
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="cl.desafiolatm.inventarioproductos.ui.ListaFragment"
+        android:label="fragment_lista"
+        tools:layout="@layout/fragment_lista" >
+        <action
+            android:id="@+id/action_listaFragment_to_agregarFragment"
+            app:destination="@id/agregarFragment" />
+        <action
+            android:id="@+id/action_listaFragment_to_editarFragment"
+            app:destination="@id/editarFragment" />
+        <action
+            android:id="@+id/action_listaFragment_to_totalFragment"
+            app:destination="@id/totalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarFragment"
+        android:name="cl.desafiolatm.inventarioproductos.ui.AgregarFragment"
+        android:label="fragment_agregar"
+        tools:layout="@layout/fragment_agregar" />
+    <fragment
+        android:id="@+id/editarFragment"
+        android:name="cl.desafiolatm.inventarioproductos.ui.EditarFragment"
+        android:label="fragment_editar"
+        tools:layout="@layout/fragment_editar" />
+    <fragment
+        android:id="@+id/totalFragment"
+        android:name="cl.desafiolatm.inventarioproductos.ui.TotalFragment"
+        android:label="fragment_total"
+        tools:layout="@layout/fragment_total" />
+</navigation>
